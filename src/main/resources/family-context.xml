@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <import resource="member-context.xml"/>
+
+    <bean id="familyComboBoxItemFactory" class="app.model.swing.factory.FamilyComboBoxItemFactory"/>
+
+    <bean id="familyComboBoxItem"
+          scope="prototype"
+          factory-bean="familyComboBoxItemFactory"
+          factory-method="create">
+        <constructor-arg value="family" type="app.model.Family"/>
+        <constructor-arg value="tableModel" type="javax.swing.table.TableModel"/>
+    </bean>
+
+    <bean id="family1" class="app.model.Family">
+        <constructor-arg value="Taylor"/>
+        <constructor-arg>
+            <list>
+                <ref bean="member1"/>
+                <ref bean="member2"/>
+                <ref bean="member3"/>
+                <ref bean="member4"/>
+            </list>
+        </constructor-arg>
+    </bean>
+
+    <bean id="family2" class="app.model.Family">
+        <constructor-arg value="Darkwater"/>
+        <constructor-arg>
+            <list>
+                <ref bean="member5"/>
+                <ref bean="member6"/>
+                <ref bean="member7"/>
+                <ref bean="undefinedMember"/>
+            </list>
+        </constructor-arg>
+    </bean>
+
+</beans>

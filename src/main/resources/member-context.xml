@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="member1" class="app.model.Member">
+        <constructor-arg value="John"/>
+        <constructor-arg value="MALE" type="app.model.Gender"/>
+        <constructor-arg value="30"/>
+        <constructor-arg value="FATHER" type="app.model.Role"/>
+    </bean>
+
+    <bean id="member2" class="app.model.Member">
+        <constructor-arg value="Emma"/>
+        <constructor-arg value="FEMALE" type="app.model.Gender"/>
+        <constructor-arg value="28"/>
+        <constructor-arg value="MOTHER" type="app.model.Role"/>
+    </bean>
+
+    <bean id="member3" class="app.model.Member">
+        <constructor-arg value="Stan"/>
+        <constructor-arg value="MALE" type="app.model.Gender"/>
+        <constructor-arg value="7"/>
+        <constructor-arg value="SON" type="app.model.Role"/>
+    </bean>
+
+    <bean id="member4" class="app.model.Member">
+        <constructor-arg value="Grace"/>
+        <constructor-arg value="FEMALE" type="app.model.Gender"/>
+        <constructor-arg value="4"/>
+        <constructor-arg value="DAUGHTER" type="app.model.Role"/>
+    </bean>
+
+    <bean id="member5" class="app.model.Member">
+        <constructor-arg value="Paul"/>
+        <constructor-arg value="MALE" type="app.model.Gender"/>
+        <constructor-arg value="45"/>
+        <constructor-arg value="FATHER" type="app.model.Role"/>
+    </bean>
+
+    <bean id="member6" class="app.model.Member">
+        <constructor-arg value="Nancy"/>
+        <constructor-arg value="FEMALE" type="app.model.Gender"/>
+        <constructor-arg value="40"/>
+        <constructor-arg value="MOTHER" type="app.model.Role"/>
+    </bean>
+
+    <bean id="member7" class="app.model.Member">
+        <constructor-arg value="William"/>
+        <constructor-arg value="MALE" type="app.model.Gender"/>
+        <constructor-arg value="15"/>
+        <constructor-arg value="SON" type="app.model.Role"/>
+    </bean>
+
+    <bean id="undefinedMember" class="app.model.Member"/>
+
+</beans>

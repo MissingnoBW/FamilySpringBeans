@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <import resource="family-context.xml"/>
+
+    <bean id="familyItemList" class="java.util.ArrayList">
+        <constructor-arg>
+            <list>
+                <bean class="app.model.swing.FamilyComboBoxItem">
+                    <constructor-arg ref="family1"/>
+                    <constructor-arg ref="tableModel1"/>
+                </bean>
+
+                <bean class="app.model.swing.FamilyComboBoxItem">
+                    <constructor-arg ref="family2"/>
+                    <constructor-arg ref="tableModel2"/>
+                </bean>
+
+            </list>
+        </constructor-arg>
+    </bean>
+
+
+    <bean id="tableModel1" class="app.model.swing.TableModel">
+        <constructor-arg>
+            <list>
+                <bean class="app.model.swing.MemberTableItem">
+                    <constructor-arg ref="member1"/>
+                </bean>
+                <bean class="app.model.swing.MemberTableItem">
+                    <constructor-arg ref="member2"/>
+                </bean>
+                <bean class="app.model.swing.MemberTableItem">
+                    <constructor-arg ref="member3"/>
+                </bean>
+                <bean class="app.model.swing.MemberTableItem">
+                    <constructor-arg ref="member4"/>
+                </bean>
+
+            </list>
+        </constructor-arg>
+    </bean>
+
+    <bean id="tableModel2" class="app.model.swing.TableModel">
+        <constructor-arg>
+            <list>
+                <bean class="app.model.swing.MemberTableItem">
+                    <constructor-arg ref="member5"/>
+                </bean>
+                <bean class="app.model.swing.MemberTableItem">
+                    <constructor-arg ref="member6"/>
+                </bean>
+                <bean class="app.model.swing.MemberTableItem">
+                    <constructor-arg ref="member7"/>
+                </bean>
+                <bean class="app.model.swing.MemberTableItem">
+                    <constructor-arg ref="undefinedMember"/>
+                </bean>
+            </list>
+        </constructor-arg>
+    </bean>
+
+</beans>
