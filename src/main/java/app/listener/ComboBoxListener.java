@@ -12,7 +12,7 @@ public class ComboBoxListener implements ActionListener {
     private final JComboBox<ComboBoxItem> comboBox;
     private final JTable table;
 
-    public ComboBoxListener(JComboBox<ComboBoxItem> comboBox, JTable table, JFrame frame){
+    public ComboBoxListener(JComboBox<ComboBoxItem> comboBox, JTable table){
         this.comboBox = comboBox;
         this.table = table;
         comboBox.addActionListener(this);
