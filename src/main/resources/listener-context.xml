@@ -8,7 +8,6 @@
     <bean id="comboBoxListener" class="app.listener.ComboBoxListener">
         <constructor-arg ref="comboBox"/>
         <constructor-arg ref="table"/>
-        <constructor-arg ref="mainFrame"/>
     </bean>
 
 </beans>
